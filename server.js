@@ -29,7 +29,6 @@ mongoose.connect(
     useFindAndModify: false
   }
 );
-});
 
 
 
