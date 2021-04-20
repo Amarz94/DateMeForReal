@@ -1,16 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 form {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
     display:table;/* shrinks to fit content */
     margin:auto;
+    color: #252e3d;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    height: 30px;
+    width: 200px;
+}
+
+select {
+    height: 30px;
+}
+
+.formWrap {
+    padding-top: 5px;
+    margin-top: 3%;
+    background-color: #d8d8d86c;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: #3B4B64;
+    float: left;
+    width: 30%;
+    margin-left: 10%;
+}
+
+#imgCard {
+    max-width: 100%;
+    height: 75vh;
+    padding-right: 10%;
+}
+
+#cardExample {
+    margin-top: 3%;
+    float: right;
+    width: 40%;
+    height: auto;
+    max-width: 100%;
+    max-height: 90%;
+    margin-right: 5%;
+    
+
+}
+
+#inputCon {
+    overflow: hidden;
 }
 
 .submitButton {
-    background-color: #4CAF50; /* Green */
+    background-color: #3B4B64; /* Green */
     border: none;
     color: white;
-    padding: 15px 32px;
-    text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     border-radius: 12px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }

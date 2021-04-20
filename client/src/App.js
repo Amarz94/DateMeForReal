@@ -33,10 +33,8 @@ function App() {
           <Route path="/profile">
             <UpdateUser />
             <br />
-            <AmplifySignOut />
           </Route>
           <Route path="/filter">
-            <Particles />
             <Filter />
             <Particles />
           </Route>

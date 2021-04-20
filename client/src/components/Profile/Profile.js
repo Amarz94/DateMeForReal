@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Profile.css";
 import API from "../../utils/API";
+import UserCard from "../Cards/Cards"
 
 export default class UpdateUser extends Component {
   constructor(props) {
@@ -67,19 +68,24 @@ export default class UpdateUser extends Component {
 
   render() {
     return (
-      <form onSubmit={this.onSubmit}>
-        <label>Name</label>
+      <div id="inputCon">
+      <div className="formWrap">
+        <h1>Update Profile</h1>
+      <form className="formInput" onSubmit={this.onSubmit}>
+        <label>Name :</label>
         <br />
         <input
+          placeholder="Enter Your Name"
           onChange={this.onChangeUserName}
           value={this.state.name}
           type="text"
         />
         <br />
         <br />
-        <label>Email</label>
+        <label>Email :</label>
         <br />
         <input
+          placeholder="Enter Your Email"
           onChange={this.onChangeUserEmail}
           value={this.state.email}
           type="email"
@@ -87,25 +93,29 @@ export default class UpdateUser extends Component {
         <br />
         <br />
         <label>
-          Gender:
-          <select onChange={this.onChangeUserGender} value={this.state.value}>
+          Gender : <br/>
+          <select style={{width: "100%"}} onChange={this.onChangeUserGender} value={this.state.value}>
+          <option value="disabled" disabled selected hidden>-Select a Gender-</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
         </label>
         <br />
         <br />
-        <label>Age</label>
+        <label>Age :</label>
         <br />
         <input
+          placeholder="Enter Your Age"
           onChange={this.onChangeUserAge}
           value={this.state.age}
           type="number"
         />
         <br />
         <br />
-        <h4>Photo URL</h4>
+        <label>Photo URL :</label>
+        <br />
         <input
+          placeholder="Provide an image address"
           onChange={this.onChangeUserUrl}
           value={this.state.url}
           name="url"
@@ -116,6 +126,27 @@ export default class UpdateUser extends Component {
         <input className="submitButton" type="submit" value="Submit" />
         <br />
       </form>
+      </div>
+
+              <div id="cardExample">
+                  <div
+                    className="swipe"
+                    key={this.state.name}
+                    preventSwipe={["up", "down"]}
+                  >
+                    <img
+                      src={this.state.url}
+                      id="imgCard"
+                      
+                    />
+                    <h3 className="userInfo"><b>{this.state.name} | {this.state.age} | {this.state.email}</b></h3>
+                  </div>
+              </div>
+
+
+
+      </div>
+      
     );
   }
 }

@@ -1,11 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     z-index: 100;
-    border-bottom: 1px solid #f9f9f9;
+    border-bottom: 1px solid #000000;
+    background-color: #3B4B64;
+    position: relative;
+    width: 100%;
 }
 
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p {
+    font-weight: lighter;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size:15px;
+
+}
+
+
+
+.MuiButtonBase-root {
+    padding: 0 0 0 12px !important;
+    justify-content: space-evenly;
+    margin-left: auto !important;
+    display: flex;
+}
+
+#fixThis {
+    padding: 0px;
+}
+
+#navBtn {
+    margin: 0;
+    height: 50px;
+    float: right;
+
+}
+
+.pageBtn {
+    margin-left: 10px;
+}
 
 .header_home {
     object-fit: contain;
