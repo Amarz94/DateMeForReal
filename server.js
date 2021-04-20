@@ -20,10 +20,15 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes)
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/userDb", {
-  useUnifiedTopology: true,
-  useNewUrlParser: true,
-  useCreateIndex: true,
+mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb://localhost/userDb',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  }
+);
 });
 
 
